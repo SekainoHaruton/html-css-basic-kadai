@@ -1,0 +1,162 @@
+/* 全体のスタイル */
+body {
+  min-width: 375px; /* スマートフォンでの最小幅 */
+  margin: 0;
+  font-family: Arial, sans-serif; /* フォントの指定 */
+}
+
+/* ヘッダー全体 */
+header {
+  display: flex; /* ロゴとナビゲーションを横並び */
+  justify-content: space-between; /* 左右に配置 */
+  align-items: center; /* 縦方向の中央揃え */
+  padding: 20px 30px; /* ヘッダー内の余白 */
+  border-bottom: 1px solid #ddd; /* 下線 */
+}
+/* ロゴ全体 */
+#logo-container {
+  display: flex;
+  flex-direction: column; /* ロゴ画像とテキストを縦並びに配置 */
+  align-items: flex-start; /* 左揃えに変更 */
+  text-align: left; /* テキストの左揃え */
+  gap: 10px; /* ロゴ画像とテキスト間のスペース */
+  margin: 0; /* 左揃えの場合、中央揃え用のautoを削除 */
+}
+
+/* ロゴ下のタイトルテキスト */
+#logo-text h1 {
+  font-size: 24px; /* タイトルの文字サイズ */
+  font-weight: bold; /* 太字 */
+  color: #b4762f; /* タイトルの色 */
+  margin: 0; /* 余白を削除 */
+  text-align: left; /* 左揃えに変更 */
+}
+
+/* ロゴ下のサブテキスト */
+#logo-text p {
+  font-size: 14px; /* サブテキストの文字サイズ */
+  color: #333; /* サブテキストの色 */
+  margin: 0; /* 上下の余白を削除 */
+  text-align: left; /* 左揃えに変更 */
+}
+
+#logo-text p {
+  font-size: 14px;
+  color: #333; /* サブテキストの色 */
+  margin: 0; /* 余白を削除 */
+}
+
+/* メイン画像 */
+main img {
+  width: 100%; /* 画面幅に合わせる */
+  max-width: 1200px; /* 最大幅を指定 */
+  height: auto; /* 高さを自動調整 */
+  display: block; /* ブラウザの余計なスペースを防ぐ */
+  margin: 0 auto; /* 中央揃え */
+}
+
+/* PC用ナビゲーション */
+#nav-pc ul {
+  list-style: none; /* リストマーカーを削除 */
+  display: flex; /* 横並びに配置 */
+  margin: 0;
+  padding: 0;
+}
+#nav-pc li {
+  margin: 0 15px; /* メニュー項目間のスペース */
+}
+#nav-pc a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #000; /* リンクの文字色 */
+  font-size: 16px; /* リンクの文字サイズ */
+  font-weight: bold; /* リンクを太字にする */
+}
+
+/* ハンバーガーメニュー */
+#menu-sp {
+  display: block; /* デフォルトでは非表示（PC用） */
+  position: flex; /* 右上に配置 */
+  top: 20px;
+  right: 50px;
+  width: 30px; /* 幅を調整 */
+  height: auto;
+  z-index: 200; /* 他の要素より前面に表示 */
+  float: right;
+  padding: 0;
+}
+
+/* スマートフォン用ナビゲーション全体 */
+#nav-sp {
+  background-color: #ce933e; /* 背景色 */
+  display: none;
+  position: absolute; /* 絶対位置で全画面を覆う */
+  left: 0;
+  top: 0;
+  height: 100%; /* 画面全体の高さ */
+  width: 100%; /* 画面全体の幅 */
+  display: none; /* 初期状態で非表示 */
+  z-index: 100; /* 他の要素の前面に表示 */
+}
+
+/* スマートフォン用ナビゲーション内のリスト */
+#nav-sp ul {
+  padding-left: 0; /* リストの左余白を削除 */
+}
+#nav-sp li {
+  list-style: none; /* リストマーカーを削除 */
+  margin: 20px; /* 項目間のスペース */
+}
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px; /* 閉じるボタンの幅 */
+  height: auto; /* アスペクト比を維持 */
+  cursor: pointer;
+  z-index: 200; /* 他の要素より前面に表示 */
+}
+
+/* ロゴ（ナビゲーション内） */
+#logo-sp {
+  margin: 80px 0 30px 20px; /* 上:80px, 右:0px, 下:30px, 左:20px */
+}
+
+/* ナビゲーションリンク */
+#nav-sp a {
+  display: block; /* ブロック要素として配置 */
+  color: #ffffff; /* 文字色を白 */
+  text-decoration: none; /* 下線を削除 */
+  font-size: 16px; /* 文字サイズ */
+  height: 44px; /* 項目の高さ */
+  margin: 0 20px; /* 左右に余白を設定 */
+  background-image: url("images/arrow.png"); /* 背景画像として矢印を設定 */
+  background-repeat: no-repeat; /* 繰り返さない */
+  background-position: right center; /* 右中央に配置 */
+}
+
+
+/* ナビゲーションリンクのホバーやクリック時の調整 */
+#nav-sp a:link,
+#nav-sp a:visited,
+#nav-sp a:hover,
+#nav-sp a:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  #menu-sp {
+    display: none; /* PC用では非表示 */
+  }
+  #nav-sp {
+    display: none; /* PC用では非表示 */
+  }
+}
+/* レスポンシブ対応 */
+@media screen and (max-width: 767px) {
+  #nav-pc {
+    display: none; /* スマートフォンでは非表示 */
+  }
+  #menu-sp {
+    display: block; /* スマートフォンで表示 */
+  }
+}

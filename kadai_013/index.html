@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organic Cafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+   <div id="logo-container">
+    <img src="images/logo.png" alt="Organic Cafeのロゴ" id="logo-img">
+    <!-- ロゴ下のテキスト -->
+    <div id="logo-text">
+    <h1>Organic Cafe</h1>
+    <p>自家焙煎コーヒーが買えるお店</p>
+    </div>
+    </div>
+    <!-- PC用ナビゲーション -->
+    <nav id="nav-pc">
+      <ul>
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#product">PRODUCT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メイン画像 -->
+  <main>
+    <img src="images/main-image.jpg" alt="コーヒーを注いでいる画像">
+  </main>
+
+  <!-- ハンバーガーメニューアイコン（スマートフォン用） -->
+  <img
+    id="menu-sp"
+    src="images/button-menu.png"
+    alt="ナビゲーションを開く"
+    onclick="document.getElementById('nav-sp').style.display = 'block'">
+
+  <!-- スマートフォン用ナビゲーション -->
+  <nav id="nav-sp" style="display: none;">
+    <!-- 閉じるボタン -->
+    <img
+      id="close"
+      src="images/button-close.png"
+      alt="ナビゲーションを閉じる"
+      onclick="document.getElementById('nav-sp').style.display = 'none'">
+
+    <!-- ナビゲーション内のロゴ -->
+    <a id="logo-sp" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
+      <img src="images/logo-sp.png" alt="トップページに戻る">
+    </a>
+
+    <!-- ナビゲーションメニュー -->
+    <ul>
+      <li><a class="menu" href="#concept" onclick="document.getElementById('nav-sp').style.display = 'none'">CONCEPT</a></li>
+      <li><a class="menu" href="#product" onclick="document.getElementById('nav-sp').style.display = 'none'">PRODUCT</a></li>
+      <li><a class="menu" href="#contact" onclick="document.getElementById('nav-sp').style.display = 'none'">CONTACT</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
